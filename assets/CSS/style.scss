@@ -1,0 +1,130 @@
+@import './fonts';
+@import './colors';
+
+.splitter {
+    position: absolute;
+    top: 5vh;
+    z-index: -1;
+    h5 {
+        letter-spacing: 5px;
+        color: $dark-grayish-cyan;
+    }
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.gray-text {
+    color : $dark-grayish-cyan;
+}
+.container {
+    border-radius: 1rem;
+    max-width: 800px;
+    @media (max-width:665px){
+        flex-direction: column;
+    }
+}
+
+body {
+    font-family: "Space Mono";
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $light-grayish-cyan;
+}
+
+.right-side {
+    border-radius: 1rem;
+    background-color: $very-dark-cyan;
+    padding: 2rem;
+}
+
+.reset {
+    margin-top: 7rem;
+    display: block;
+    background-color: $strong-cyan;
+    height: 2.5rem;
+    @media (max-width:665px) {
+        margin-top: 2rem;
+    }
+}
+.reset:hover {
+    background-color: $light-grayish-cyan;
+    cursor: pointer;
+}
+
+.big-green {
+    color: $strong-cyan;
+    font-size: 2.5rem;
+}
+
+label.radio {
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc((100% - 1rem)/3);
+    height: 2.5rem;
+    background-color: $very-dark-cyan;
+    color: white;
+    transition: all 0.1s  ;
+}
+label.radio:hover {
+    cursor: pointer;
+    background-color: $light-grayish-cyan;
+    color: black;
+}
+label.radio.selected {
+    background-color: $strong-cyan;
+    color: black;
+}
+
+.percents {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    @media (max-width:665px) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+#bill-amount {
+    padding-inline: 1rem;
+    border: 0;
+    border-radius: 0.3rem;
+    height: 2.3rem;
+    background-color: $very-light-grayish-cyan;
+    font-size: 24px;
+    @media (max-width:665px) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+#bill-amount:focus {
+    outline: 2px solid $strong-cyan;
+}
+#bill-amount.wrong {
+    outline: 2px solid red;
+}
+
+#num-of-ppl {
+    padding-inline: 1rem;
+    border: 0;
+    border-radius: 0.3rem;
+    height: 2.3rem;
+    background-color: $very-light-grayish-cyan;
+    font-size: 24px;
+}
+
+#num-of-ppl:focus {
+    outline: 2px solid $strong-cyan;
+}
+
+#num-of-ppl.wrong {
+    outline: 2px solid red;
+}
+
+.cant-zero {
+    display: none;
+}
